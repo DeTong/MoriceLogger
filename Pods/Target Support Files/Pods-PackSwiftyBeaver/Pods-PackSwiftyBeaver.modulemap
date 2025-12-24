@@ -1,0 +1,6 @@
+module Pods_PackSwiftyBeaver {
+  umbrella header "Pods-PackSwiftyBeaver-umbrella.h"
+
+  export *
+  module * { export * }
+}

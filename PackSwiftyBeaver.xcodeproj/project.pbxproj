@@ -6,8 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BC751661B742DD59E2065C15 /* libPods-PackSwiftyBeaver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9CC2F0D173558743FC56A0 /* libPods-PackSwiftyBeaver.a */; };
+		FE47E3BB2EFBE5FD00EF14BE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FE47E3BA2EFBE5FD00EF14BE /* Podfile */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		1C9CC2F0D173558743FC56A0 /* libPods-PackSwiftyBeaver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PackSwiftyBeaver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35C75FACAA5BFE296C0A569D /* Pods-PackSwiftyBeaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PackSwiftyBeaver.debug.xcconfig"; path = "Target Support Files/Pods-PackSwiftyBeaver/Pods-PackSwiftyBeaver.debug.xcconfig"; sourceTree = "<group>"; };
+		F75F5CEB0AE2480E424BAF64 /* Pods-PackSwiftyBeaver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PackSwiftyBeaver.release.xcconfig"; path = "Target Support Files/Pods-PackSwiftyBeaver/Pods-PackSwiftyBeaver.release.xcconfig"; sourceTree = "<group>"; };
 		FE47E3A22EFBE5B500EF14BE /* PackSwiftyBeaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PackSwiftyBeaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE47E3BA2EFBE5FD00EF14BE /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +45,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC751661B742DD59E2065C15 /* libPods-PackSwiftyBeaver.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		354D9B44D02FDD8B58729AA0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35C75FACAA5BFE296C0A569D /* Pods-PackSwiftyBeaver.debug.xcconfig */,
+				F75F5CEB0AE2480E424BAF64 /* Pods-PackSwiftyBeaver.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F069D265FB8581B6D610BAB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C9CC2F0D173558743FC56A0 /* libPods-PackSwiftyBeaver.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE47E3992EFBE5B500EF14BE = {
 			isa = PBXGroup;
 			children = (
+				FE47E3BA2EFBE5FD00EF14BE /* Podfile */,
 				FE47E3A42EFBE5B500EF14BE /* PackSwiftyBeaver */,
 				FE47E3A32EFBE5B500EF14BE /* Products */,
+				354D9B44D02FDD8B58729AA0 /* Pods */,
+				F069D265FB8581B6D610BAB3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE47E3B52EFBE5B600EF14BE /* Build configuration list for PBXNativeTarget "PackSwiftyBeaver" */;
 			buildPhases = (
+				362D28AAFBBD2E39AC3318E4 /* [CP] Check Pods Manifest.lock */,
 				FE47E39E2EFBE5B500EF14BE /* Sources */,
 				FE47E39F2EFBE5B500EF14BE /* Frameworks */,
 				FE47E3A02EFBE5B500EF14BE /* Resources */,
+				F83F837C4F8F673FAC129DDD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -77,8 +109,6 @@
 				FE47E3A42EFBE5B500EF14BE /* PackSwiftyBeaver */,
 			);
 			name = PackSwiftyBeaver;
-			packageProductDependencies = (
-			);
 			productName = PackSwiftyBeaver;
 			productReference = FE47E3A22EFBE5B500EF14BE /* PackSwiftyBeaver.app */;
 			productType = "com.apple.product-type.application";
@@ -122,10 +152,57 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE47E3BB2EFBE5FD00EF14BE /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		362D28AAFBBD2E39AC3318E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PackSwiftyBeaver-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F83F837C4F8F673FAC129DDD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PackSwiftyBeaver/Pods-PackSwiftyBeaver-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PackSwiftyBeaver/Pods-PackSwiftyBeaver-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PackSwiftyBeaver/Pods-PackSwiftyBeaver-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE47E39E2EFBE5B500EF14BE /* Sources */ = {
@@ -140,12 +217,14 @@
 /* Begin XCBuildConfiguration section */
 		FE47E3B62EFBE5B600EF14BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35C75FACAA5BFE296C0A569D /* Pods-PackSwiftyBeaver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 25R6N786WT;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PackSwiftyBeaver/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -172,12 +251,14 @@
 		};
 		FE47E3B72EFBE5B600EF14BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F75F5CEB0AE2480E424BAF64 /* Pods-PackSwiftyBeaver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 25R6N786WT;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PackSwiftyBeaver/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
