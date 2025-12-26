@@ -12,6 +12,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        showLoggerInfo()
+    }
+    
+    func showLoggerInfo() {
+        MLogVerbose(nil)
+        MLogDebug(nil)
+        
+        MLogDebug("lalala")
     }
 
 

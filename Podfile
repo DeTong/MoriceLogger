@@ -1,7 +1,7 @@
 
 target 'PackSwiftyBeaver' do
 
-    platform :ios, '26.1'
+    platform :ios, '13.4'
 
     pod 'SwiftyBeaver'
     
