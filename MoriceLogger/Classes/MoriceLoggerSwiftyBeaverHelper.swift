@@ -1,6 +1,6 @@
 //
 //  MoriceLoggerSwiftyBeaverHelper.swift
-//  MoriceLogger
+//  PackSwiftyBeaver
 //
 //  Created by DeTong on 2025/12/24.
 //
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyBeaver
 
-public final class SPAXSwiftyBeaverLogger: MoriceLogger {
+final class MoriceLoggerSwiftyBeaverHelper: MoriceLogger {
     
     private let log = SwiftyBeaver.self
     private var fileDestination: FileDestination?
@@ -16,7 +16,7 @@ public final class SPAXSwiftyBeaverLogger: MoriceLogger {
     // 最多保留的日志文件数量
     private let maxLogFileCount = 15
 
-    public init() {
+    init() {
         setup()
     }
 
@@ -50,16 +50,13 @@ public final class SPAXSwiftyBeaverLogger: MoriceLogger {
         let fileManager = FileManager.default
         
         // 确保目录存在
-        if !fileManager.fileExists(atPath: logsDirectory.path) {
-            try? fileManager.createDirectory(at: logsDirectory, withIntermediateDirectories: true, attributes: nil)
-            return
-        }
+        guard fileManager.fileExists(atPath: logsDirectory.path) else { return }
         
         do {
             // 获取目录下所有文件
             let files = try fileManager.contentsOfDirectory(at: logsDirectory, includingPropertiesForKeys: [.contentModificationDateKey], options: [])
             
-            // 筛选出日志文件（文件名以 morice_log_ 开头，以 .log 结尾）
+            // 筛选出日志文件（文件名以 ‘loggerFilePrefix’ 开头，以 .log 结尾）
             let logFiles = files.filter { url in
                 let fileName = url.lastPathComponent
                 return fileName.hasPrefix(loggerFilePrefix) && fileName.hasSuffix(".log")
@@ -86,31 +83,31 @@ public final class SPAXSwiftyBeaverLogger: MoriceLogger {
     }
     
     //  MARK: - 日志输出
-    public func verbose(_ message: Any?, tag: String?, file: String, function: String, line: Int) {
+    func verbose(_ message: Any?, tag: String?, file: String, function: String, line: Int) {
         log.verbose(format(message, tag: tag), file: file, function: function, line: line)
     }
 
-    public func debug(_ message: Any?, tag: String?, file: String, function: String, line: Int) {
+    func debug(_ message: Any?, tag: String?, file: String, function: String, line: Int) {
         log.debug(format(message, tag: tag), file: file, function: function, line: line)
     }
     
-    public func info(_ message: Any?, tag: String?, file: String, function: String, line: Int) {
+    func info(_ message: Any?, tag: String?, file: String, function: String, line: Int) {
         log.info(format(message, tag: tag), file: file, function: function, line: line)
     }
     
-    public func warning(_ message: Any?, tag: String?, file: String, function: String, line: Int) {
+    func warning(_ message: Any?, tag: String?, file: String, function: String, line: Int) {
         log.warning(format(message, tag: tag), file: file, function: function, line: line)
     }
     
-    public func error(_ message: Any?, tag: String?, file: String, function: String, line: Int) {
+    func error(_ message: Any?, tag: String?, file: String, function: String, line: Int) {
         log.error(format(message, tag: tag), file: file, function: function, line: line)
     }
     
-    public func critical(_ message: Any?, tag: String?, file: String, function: String, line: Int) {
+    func critical(_ message: Any?, tag: String?, file: String, function: String, line: Int) {
         log.critical(format(message, tag: tag), file: file, function: function, line: line)
     }
     
-    public func fault(_ message: Any?, tag: String?, file: String, function: String, line: Int) {
+    func fault(_ message: Any?, tag: String?, file: String, function: String, line: Int) {
         log.fault(format(message, tag: tag), file: file, function: function, line: line)
     }
     
@@ -121,8 +118,7 @@ public final class SPAXSwiftyBeaverLogger: MoriceLogger {
     }
     
     //  MARK: - 日志上传
-    public func uploadLoggerFile() {
+    func uploadLoggerFile() {
         
     }
 }
-

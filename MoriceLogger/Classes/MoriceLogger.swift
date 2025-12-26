@@ -1,13 +1,13 @@
 //
 //  MoriceLogger.swift
-//  MoriceLogger
+//  PackSwiftyBeaver
 //
 //  Created by DeTong on 2025/12/24.
 //
 
 import Foundation
 
-public protocol MoriceLogger {
+protocol MoriceLogger {
     
     //  MARK: - 基础信息
     var loggerFilePrefix: String { get }
@@ -15,9 +15,8 @@ public protocol MoriceLogger {
     var loggerFileFolder: URL { get }
     var loggerFileURL: URL { get }
     
-    func showInfo()
+    func loggerInfo()
     
-
     //  MARK: - 日志输出
     func verbose(_ message: Any?, tag: String?, file: String, function: String, line: Int)
     func debug(_ message: Any?, tag: String?, file: String, function: String, line: Int)
@@ -31,7 +30,7 @@ public protocol MoriceLogger {
     func uploadLoggerFile()
 }
 
-public extension MoriceLogger {
+extension MoriceLogger {
     
     var loggerFilePrefix: String {
         return "morice_log_"
@@ -40,31 +39,21 @@ public extension MoriceLogger {
     var loggerFileFolder: URL {
         let path = FileManager.default.urls(for:.documentDirectory, in:.userDomainMask)[0]
         let logsDirectory = path.appendingPathComponent("com.morice.logger", isDirectory: true)
-        
-        // 确保目录存在
-        let fileManager = FileManager.default
-        if !fileManager.fileExists(atPath: logsDirectory.path) {
-            try? fileManager.createDirectory(at: logsDirectory, withIntermediateDirectories: true, attributes: nil)
-        }
-        
         return logsDirectory
     }
     
-    /// 根据当前日期生成日志文件 URL
     var loggerFileURL: URL {
-        // 生成基于日期的文件名，格式：morice_log_yyyy-MM-dd.log
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let dateString = dateFormatter.string(from: Date())
         let fileName = "\(loggerFilePrefix)\(dateString).log"
-        
         return loggerFileFolder.appendingPathComponent(fileName)
     }
     
-    func showInfo() {
-        SLogInfo(MoriceLoggerManage.shared.loggerFilePrefix)
-        SLogInfo(MoriceLoggerManage.shared.loggerFileFolder)
-        SLogInfo(MoriceLoggerManage.shared.loggerFileURL)
+    func loggerInfo() {
+        MLogInfo(MoriceLoggerManage.shared.loggerFilePrefix)
+        MLogInfo(MoriceLoggerManage.shared.loggerFileFolder)
+        MLogInfo(MoriceLoggerManage.shared.loggerFileURL)
     }
     
     func uploadLoggerFile() {
@@ -72,35 +61,39 @@ public extension MoriceLogger {
     }
 }
 
-public enum MoriceLoggerManage {
-    public static var shared: MoriceLogger = SPAXSwiftyBeaverLogger()
+//  MARK: - 便捷使用
+enum MoriceLoggerManage {
+    static var shared: MoriceLogger = MoriceLoggerSwiftyBeaverHelper()
 }
 
-public func SLogVerbose(_ message: Any?, tag: String? = nil, file: String = #file, function: String = #function, line: Int = #line) {
+func MLogDetail() {
+    MoriceLoggerManage.shared.loggerInfo()
+}
+
+func MLogVerbose(_ message: Any?, tag: String? = nil, file: String = #file, function: String = #function, line: Int = #line) {
     MoriceLoggerManage.shared.verbose(message, tag: tag, file: file, function: function, line: line)
 }
 
-public func SLogDebug(_ message: Any?, tag: String? = nil, file: String = #file, function: String = #function, line: Int = #line) {
+func MLogDebug(_ message: Any?, tag: String? = nil, file: String = #file, function: String = #function, line: Int = #line) {
     MoriceLoggerManage.shared.debug(message, tag: tag, file: file, function: function, line: line)
 }
 
-public func SLogInfo(_ message: Any?, tag: String? = nil, file: String = #file, function: String = #function, line: Int = #line) {
+func MLogInfo(_ message: Any?, tag: String? = nil, file: String = #file, function: String = #function, line: Int = #line) {
     MoriceLoggerManage.shared.info(message, tag: tag, file: file, function: function, line: line)
 }
 
-public func SLogWarning(_ message: Any?, tag: String? = nil, file: String = #file, function: String = #function, line: Int = #line) {
+func MLogWarning(_ message: Any?, tag: String? = nil, file: String = #file, function: String = #function, line: Int = #line) {
     MoriceLoggerManage.shared.warning(message, tag: tag, file: file, function: function, line: line)
 }
 
-public func SLogError(_ message: Any?, tag: String? = nil, file: String = #file, function: String = #function, line: Int = #line) {
+func MLogError(_ message: Any?, tag: String? = nil, file: String = #file, function: String = #function, line: Int = #line) {
     MoriceLoggerManage.shared.error(message, tag: tag, file: file, function: function, line: line)
 }
 
-public func SLogCritical(_ message: Any?, tag: String? = nil, file: String = #file, function: String = #function, line: Int = #line) {
+func MLogCritical(_ message: Any?, tag: String? = nil, file: String = #file, function: String = #function, line: Int = #line) {
     MoriceLoggerManage.shared.critical(message, tag: tag, file: file, function: function, line: line)
 }
 
-public func SLogFault(_ message: Any?, tag: String? = nil, file: String = #file, function: String = #function, line: Int = #line) {
+func MLogFault(_ message: Any?, tag: String? = nil, file: String = #file, function: String = #function, line: Int = #line) {
     MoriceLoggerManage.shared.fault(message, tag: tag, file: file, function: function, line: line)
 }
-
