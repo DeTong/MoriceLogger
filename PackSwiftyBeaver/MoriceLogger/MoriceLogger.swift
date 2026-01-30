@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol MoriceLogger {
+public protocol MoriceLogger {
     
     //  MARK: - 基础信息
     var loggerFilePrefix: String { get }
@@ -62,8 +62,8 @@ extension MoriceLogger {
 }
 
 //  MARK: - 便捷使用
-enum MoriceLoggerManage {
-    static var shared: MoriceLogger = MoriceLoggerSwiftyBeaverHelper()
+public enum MoriceLoggerManage {
+    public static var shared: MoriceLogger = MoriceLoggerSwiftyBeaverHelper()
 }
 
 func MLogDetail() {
