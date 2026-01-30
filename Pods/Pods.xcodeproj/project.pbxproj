@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 71;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -43,7 +43,7 @@
 /* Begin PBXFileReference section */
 		04C4B111FA037B42BBC9374BA5AD407B /* Pods-PackSwiftyBeaver-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PackSwiftyBeaver-umbrella.h"; sourceTree = "<group>"; };
 		0FF441C24FE62C8F345A29E8A8E7B4C5 /* SwiftyBeaver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyBeaver.release.xcconfig; sourceTree = "<group>"; };
-		10FA07547C13D157FF06EC368D60C946 /* Pods-PackSwiftyBeaver */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-PackSwiftyBeaver"; path = "libPods-PackSwiftyBeaver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10FA07547C13D157FF06EC368D60C946 /* libPods-PackSwiftyBeaver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PackSwiftyBeaver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16CA97C769637D1CDA7ECC61322097CB /* Pods-PackSwiftyBeaver.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PackSwiftyBeaver.modulemap"; sourceTree = "<group>"; };
 		1D636C155505DA87F049140F6E1F91C1 /* Pods-PackSwiftyBeaver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PackSwiftyBeaver.release.xcconfig"; sourceTree = "<group>"; };
 		1ED266ADF66A24A5FEACE6B2721C9016 /* FileDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileDestination.swift; path = Sources/FileDestination.swift; sourceTree = "<group>"; };
@@ -58,14 +58,14 @@
 		596FB71D84A8C6DFCABB7D65A9178C93 /* SwiftyBeaver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyBeaver.swift; path = Sources/SwiftyBeaver.swift; sourceTree = "<group>"; };
 		6D18E88928B4FEF8913430D8BC010BF8 /* Pods-PackSwiftyBeaver-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PackSwiftyBeaver-acknowledgements.plist"; sourceTree = "<group>"; };
 		716F0177868662160369EB444FFEBB7A /* SwiftyBeaver-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyBeaver-umbrella.h"; sourceTree = "<group>"; };
-		7A5F7001277980B8F3EEA75BCD346E53 /* SwiftyBeaver */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = SwiftyBeaver; path = libSwiftyBeaver.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A5F7001277980B8F3EEA75BCD346E53 /* libSwiftyBeaver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwiftyBeaver.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E4E53EB9B82C830715119CC39EAD27 /* ResourceBundle-SwiftyBeaver-SwiftyBeaver-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SwiftyBeaver-SwiftyBeaver-Info.plist"; sourceTree = "<group>"; };
 		912E1D1F42EE485A306D4D8B957D2030 /* SwiftyBeaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyBeaver.debug.xcconfig; sourceTree = "<group>"; };
-		9215295657AC6ABB8D4E934AEA62EEF6 /* SwiftyBeaver-SwiftyBeaver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "SwiftyBeaver-SwiftyBeaver"; path = SwiftyBeaver.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		9215295657AC6ABB8D4E934AEA62EEF6 /* SwiftyBeaver.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyBeaver.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D87F952D073EAE43354DA3FDAE0EF62 /* ConsoleDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConsoleDestination.swift; path = Sources/ConsoleDestination.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; };
 		C8D9AF560350C65F422B04158C7B2384 /* BaseDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseDestination.swift; path = Sources/BaseDestination.swift; sourceTree = "<group>"; };
-		CF01BC34CF744AF2A6E66729290667BA /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		CF01BC34CF744AF2A6E66729290667BA /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		D1C86B61E7EC55B031A6B01B190DF1BB /* SwiftyBeaver.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyBeaver.modulemap; sourceTree = "<group>"; };
 		DD808BA31471283B16B7759B62CCB733 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Sources/Extensions.swift; sourceTree = "<group>"; };
 		F647F2A30148E6A6FC9BE3F051D8FFE8 /* FilterValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FilterValidator.swift; path = Sources/FilterValidator.swift; sourceTree = "<group>"; };
@@ -131,9 +131,9 @@
 		3660171D628C59F85CD65CD8CFBB78FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				10FA07547C13D157FF06EC368D60C946 /* Pods-PackSwiftyBeaver */,
-				7A5F7001277980B8F3EEA75BCD346E53 /* SwiftyBeaver */,
-				9215295657AC6ABB8D4E934AEA62EEF6 /* SwiftyBeaver-SwiftyBeaver */,
+				10FA07547C13D157FF06EC368D60C946 /* libPods-PackSwiftyBeaver.a */,
+				7A5F7001277980B8F3EEA75BCD346E53 /* libSwiftyBeaver.a */,
+				9215295657AC6ABB8D4E934AEA62EEF6 /* SwiftyBeaver.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,7 +153,6 @@
 				7F19D34A31024D17B776D262CDEE9011 /* Resources */,
 				30847A63090378BC6862072E1F96D6CA /* Support Files */,
 			);
-			name = SwiftyBeaver;
 			path = SwiftyBeaver;
 			sourceTree = "<group>";
 		};
@@ -237,7 +236,7 @@
 			);
 			name = SwiftyBeaver;
 			productName = SwiftyBeaver;
-			productReference = 7A5F7001277980B8F3EEA75BCD346E53 /* SwiftyBeaver */;
+			productReference = 7A5F7001277980B8F3EEA75BCD346E53 /* libSwiftyBeaver.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		44FE1AF38BF7DF3E88AEEE6BD4DA40CD /* SwiftyBeaver-SwiftyBeaver */ = {
@@ -254,7 +253,7 @@
 			);
 			name = "SwiftyBeaver-SwiftyBeaver";
 			productName = SwiftyBeaver;
-			productReference = 9215295657AC6ABB8D4E934AEA62EEF6 /* SwiftyBeaver-SwiftyBeaver */;
+			productReference = 9215295657AC6ABB8D4E934AEA62EEF6 /* SwiftyBeaver.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		73DE760314B671156375C4FE15E606A6 /* Pods-PackSwiftyBeaver */ = {
@@ -272,7 +271,7 @@
 			);
 			name = "Pods-PackSwiftyBeaver";
 			productName = "Pods-PackSwiftyBeaver";
-			productReference = 10FA07547C13D157FF06EC368D60C946 /* Pods-PackSwiftyBeaver */;
+			productReference = 10FA07547C13D157FF06EC368D60C946 /* libPods-PackSwiftyBeaver.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -293,8 +292,6 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			minimizedProjectReferenceProxies = 0;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 3660171D628C59F85CD65CD8CFBB78FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
